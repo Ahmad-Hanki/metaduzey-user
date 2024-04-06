@@ -30,16 +30,16 @@ const Ekibimiz = () => {
           Ekibimiz
         </Link>
       </summary>
-      <ul
-        className="w-full pt-3"
-      >
-        <li>
-          <a>Submenu 1</a>
-        </li>
-        <li>
-          <a>Submenu 2</a>
-        </li>
-      </ul>
+      <div className="bg-inherit pt-3">
+        <ul className="  bg-white z-20 w-52">
+          <li>
+            <a>Submenu 1</a>
+          </li>
+          <li>
+            <a>Submenu 2</a>
+          </li>
+        </ul>
+      </div>
     </details>
   );
 };

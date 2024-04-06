@@ -57,7 +57,10 @@ const Hizmetlerimiz = () => {
       onMouseLeave={() => setOpen(false)}
       open={open}
       role="tab"
-      className={cn("tab transition-all hover:tab-active", activeServerIndex !== -1 ? "tab-active" : "tab")}
+      className={cn(
+        "tab transition-all hover:tab-active",
+        activeServerIndex !== -1 ? "tab-active" : "tab"
+      )}
     >
       <summary>
         <a
@@ -69,23 +72,25 @@ const Hizmetlerimiz = () => {
           Terapi & Danışmanlık
         </a>
       </summary>
-      <ul className="w-full pt-3">
-        {servers.map((link) => {
-          return (
-            <li key={link.href}>
-              <Link
-                className={cn(
-                  "text-black/65 hover:text-black/90",
-                  link.active ? "text-black" : ""
-                )}
-                href={link.href}
-              >
-                {link.name}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="bg-inherit pt-3">
+        <ul className="bg-white -z-50 w-52">
+          {servers.map((link) => {
+            return (
+              <li key={link.href}>
+                <Link
+                  className={cn(
+                    "text-black/65 hover:text-black/90",
+                    link.active ? "text-black" : ""
+                  )}
+                  href={link.href}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </details>
   );
 };

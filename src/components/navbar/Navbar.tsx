@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Container from "../Container";
+import Container from "../ui/Container";
 import Logo from "./Logo";
 import PhoneNav from "./PhoneNav/PhoneNav";
 import PcNavbar from "./PcNav/PcNavbar";
@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div>
       <Container>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center ">
           <Logo />
 
           <div className="xl:hidden ">
@@ -30,7 +30,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="hidden xl:flex justify-center flex-col items-center gap-1 ">
+        <div className="hidden xl:flex justify-center flex-col items-center gap-1 z-10">
           <Separator/>
           <PcNavbar />
         </div>

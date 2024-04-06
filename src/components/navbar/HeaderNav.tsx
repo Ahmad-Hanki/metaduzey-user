@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react";
-import Container from "../Container";
+import Container from "../ui/Container";
 import Link from "next/link";
 import { Facebook02Icon } from "@/assets/icons/Faceook";
 import { InstagramIcon } from "@/assets/icons/Instagram";

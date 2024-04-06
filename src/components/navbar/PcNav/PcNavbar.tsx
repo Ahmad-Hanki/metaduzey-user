@@ -53,7 +53,7 @@ const PcNavbar = () => {
   console.log(scrollY);
 
   return (
-    <div role="tablist" className={cn("tabs tabs-bordered text-black/65 mx-auto", scrollY>131 ? 'fixed top-0 p-6 z-20' : '')}>
+    <div role="tablist" className={cn("tabs tabs-bordered text-black/65 mx-auto z-20", scrollY>131 ? 'fixed top-0 p-6 z-20' : '')}>
       <HomePage />
       <Ekibimiz />
       <Hizmetlerimiz />

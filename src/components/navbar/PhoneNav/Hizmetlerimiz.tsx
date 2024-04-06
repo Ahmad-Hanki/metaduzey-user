@@ -38,11 +38,6 @@ const Hizmetlerimiz = () => {
       href: "/neden-butun-psikoloji",
       active: pathname === "/neden-butun-psikoloji",
     },
-    {
-      name: "Psikolojik Danışmanlık",
-      href: "/online-psikolog",
-      active: pathname === "/online-psikolog",
-    },
   ];
   return (
     <details>

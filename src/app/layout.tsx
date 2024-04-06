@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn(inter.className, "bg-secondary")}>
+    <html lang="en" className="bg-secondary">
+      <body className={cn(inter.className)}>
         <HeaderNav />
         <Navbar />
         <main>{children}</main>

@@ -34,35 +34,40 @@ const EkHizmetlerimiz = () => {
       onMouseLeave={() => setOpen(false)}
       open={open}
       role="tab"
-      className={cn("tab transition-all hover:tab-active", activeServerIndex !== -1 ? "tab-active" : "")}
+      className={cn(
+        "tab transition-all hover:tab-active",
+        activeServerIndex !== -1 ? "tab-active" : ""
+      )}
     >
       <summary>
         <a
           className={cn(
-            "z-10 text-black/65 transition-all",
+            "z-20 text-black/65 transition-all",
             activeServerIndex !== -1 ? "text-black" : ""
           )}
         >
           Bütünce Ebeveyn Danışmanlığı
         </a>
       </summary>
-      <ul className="pt-3">
-        {servers.map((link) => {
-          return (
-            <li key={link.href} className="max-w-60 mx-auto">
-              <Link
-                className={cn(
-                  "text-black/65 hover:text-black/90",
-                  link.active ? "text-black" : ""
-                )}
-                href={link.href}
-              >
-                {link.name}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="bg-inherit p-3">
+        <ul className=" bg-white z-10 w-52">
+          {servers.map((link) => {
+            return (
+              <li key={link.href} className="max-w-60 mx-auto">
+                <Link
+                  className={cn(
+                    "text-black/65 hover:text-black/90",
+                    link.active ? "text-black" : ""
+                  )}
+                  href={link.href}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </details>
   );
 };
