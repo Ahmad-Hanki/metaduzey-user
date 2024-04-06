@@ -30,11 +30,11 @@ const Links = () => {
     },
   ];
   return (
-    <>
+    <div>
       {Links.map((link) => {
         return (
-          <>
-            <li key={link.href}>
+          <div key={link.href}>
+            <li>
               <Link
                 className={cn(
                   "text-black/75 hover:text-black/90",
@@ -46,10 +46,10 @@ const Links = () => {
               </Link>
             </li>
             <Separator />
-          </>
+          </div>
         );
       })}
-    </>
+    </div>
   );
 };
 

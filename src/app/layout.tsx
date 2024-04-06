@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={cn(inter.className, "bg-secondary")}>
         <HeaderNav />
         <Navbar />
-        <main>{children} </main>
+        <main>{children}</main>
       </body>
     </html>
   );
