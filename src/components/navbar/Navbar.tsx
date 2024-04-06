@@ -6,7 +6,7 @@ import PcNavbar from "./PcNav/PcNavbar";
 import { Separator } from "../ui/separator";
 
 const Navbar = () => {
-  const phoneNumber = "+905335017040";
+  const phoneNumber = "+90 532 225 61 20";
 
   return (
     <div>

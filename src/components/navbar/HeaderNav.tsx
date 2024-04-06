@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import Container from "../ui/Container";
 import Link from "next/link";
 import { Facebook02Icon } from "@/assets/icons/Faceook";
@@ -7,7 +7,7 @@ import { NewTwitterIcon } from "@/assets/icons/X";
 
 const HeaderNav = () => {
   return (
-    <div className="hidden bg-amber-800/65 xl:block">
+    <div className="hidden bg-blue-800/65 xl:block">
       <Container>
         <div className="flex justify-between py-2">
           <div className="flex gap-1">
@@ -25,23 +25,23 @@ const HeaderNav = () => {
             </p>
             <div className="flex gap-1">
               <Link
-                href={"https://www.facebook.com/butunpsikoloji/"}
+                href={"https://www.facebook.com/metaduzeypsy"}
                 className="text-white hover:text-black/65 transition-colors"
               >
                 <Facebook02Icon width={18} className="text-inherit" />
               </Link>
               <Link
-                href={"https://www.instagram.com/butunpsikoloji/"}
+                href={"https://www.instagram.com/metaduzeypsy"}
                 className="text-white hover:text-black/65 transition-colors"
               >
                 <InstagramIcon width={18} className="text-inherit" />
               </Link>
               <Link
-                href={"https://twitter.com/butun_psikoloji"}
+                href={"https://www.metaduzey.com/"}
                 className="text-white hover:text-black/65 transition-colors"
               >
                 {" "}
-                <NewTwitterIcon width={18} className="text-inherit" />
+                <Linkedin width={18} className="text-inherit font-extralight" />
               </Link>
             </div>
           </div>

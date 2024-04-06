@@ -42,7 +42,7 @@ const TerapiCards = () => {
   ];
 
   return (
-    <div className="flex flex-col py-10 gap-4 items-center w-full pb-10 z-0">
+    <div className="flex flex-col gap-4 items-center w-full z-0">
       <h1 className=" text-xl md:text-2xl xl:text-3xl text-primary text-center">
         Terapi ve Danışmanlık Hizmetleri
       </h1>
