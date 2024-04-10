@@ -4,10 +4,17 @@ import Logo from "./Logo";
 import PhoneNav from "./PhoneNav/PhoneNav";
 import PcNavbar from "./PcNav/PcNavbar";
 import { Separator } from "../ui/separator";
+import getTherapies from "@/actions/getTherapies";
 
-const Navbar = () => {
+const Navbar = async () => {
+  const therapy = await getTherapies();
   const phoneNumber = "+90 532 225 61 20";
 
+  const therapistNamesAndIds = therapy.map(therapist => ({
+    id: therapist.id,
+    name: therapist.name
+  }));
+  
   return (
     <div>
       <Container>
@@ -32,7 +39,7 @@ const Navbar = () => {
 
         <div className="hidden xl:flex justify-center flex-col items-center gap-1 z-10">
           <Separator/>
-          <PcNavbar />
+          <PcNavbar data = {therapistNamesAndIds}/>
         </div>
       </Container>
     </div>

@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 
 const Ekibimiz = () => {
   const pathname = usePathname();
-
-  // we will take it from db
+  
+  
 
   return (
     <details >

@@ -1,8 +1,10 @@
 import EkibimizCard from "@/components/EkibimizCard";
 import TerapiCards from "@/components/TerapiCards";
 import Container from "@/components/ui/Container";
+import axios from "axios";
 
-export default function Home() {
+export default async function Home() {
+
   return (
     <main className="">
       <div className="bg-slate-100 py-28">
@@ -13,7 +15,7 @@ export default function Home() {
 
       <div className="py-28">
         <Container>
-          <EkibimizCard/>
+          <EkibimizCard />
         </Container>
       </div>
     </main>

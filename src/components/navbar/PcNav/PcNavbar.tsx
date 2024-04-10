@@ -8,8 +8,13 @@ import Hizmetlerimiz from "./Hizmetlerimiz";
 import EkHizmetlerimiz from "./Ek-hizmetlerimiz";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { TherapyPlace } from "@/types/types";
 
-const PcNavbar = () => {
+interface PcNavbarProps {
+  data : TherapyPlace[];
+}
+
+const PcNavbar = ({data}:PcNavbarProps) => {
   const pathname = usePathname();
 
   const Links = [
@@ -55,7 +60,7 @@ const PcNavbar = () => {
   return (
     <div role="tablist" className={cn("tabs tabs-bordered text-black/65 mx-auto z-20", scrollY>131 ? 'fixed top-0 p-6 z-20' : '')}>
       <HomePage />
-      <Ekibimiz />
+      <Ekibimiz data= {data}/>
       <Hizmetlerimiz />
       <EkHizmetlerimiz />
 
