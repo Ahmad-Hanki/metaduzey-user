@@ -1,14 +1,16 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { TherapyPlace } from "@/types/types";
-import axios from "axios";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
+interface PcNavbarnameAndId {
+  name:string,id:string
+}
 
 interface ekibibmizProps {
-  data: TherapyPlace[];
+  data: PcNavbarnameAndId[];
 }
 
 const Ekibimiz = ({ data }: ekibibmizProps) => {

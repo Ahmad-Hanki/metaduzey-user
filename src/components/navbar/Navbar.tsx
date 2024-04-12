@@ -22,7 +22,7 @@ const Navbar = async () => {
           <Logo />
 
           <div className="xl:hidden ">
-            <PhoneNav />
+            <PhoneNav data = {therapistNamesAndIds}/>
           </div>
           <div className="hidden xl:flex gap-10 xl:items-center">
             <Link

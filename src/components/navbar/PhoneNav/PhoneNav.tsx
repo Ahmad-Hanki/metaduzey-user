@@ -5,7 +5,17 @@ import EkHizmetlerimiz from "./Ek-hizmetlerimiz";
 import MainPage from "./MainPage";
 import { Separator } from "../../ui/separator";
 import Links from "./Links";
-const PhoneNav = () => {
+
+interface PhoneNavProps{
+  name:string,
+  id:string
+}
+
+interface PhoneNav {
+   data : PhoneNavProps[];
+}
+
+const PhoneNav = ({data}:PhoneNav) => {
   return (
     <div className="dropdown dropdown-end bg-transparent text-black z-20">
       <div
@@ -24,7 +34,7 @@ const PhoneNav = () => {
         </li>
         <Separator />
         <li>
-          <Ekibimiz />
+          <Ekibimiz data={data}/>
         </li>
         <Separator />
         <li>

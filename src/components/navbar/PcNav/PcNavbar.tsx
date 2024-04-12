@@ -8,10 +8,14 @@ import Hizmetlerimiz from "./Hizmetlerimiz";
 import EkHizmetlerimiz from "./Ek-hizmetlerimiz";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { TherapyPlace } from "@/types/types";
+
+interface PcNavbarnameAndId  {
+  name:string
+  id:string
+}
 
 interface PcNavbarProps {
-  data : TherapyPlace[];
+  data : PcNavbarnameAndId[];
 }
 
 const PcNavbar = ({data}:PcNavbarProps) => {
@@ -55,10 +59,9 @@ const PcNavbar = ({data}:PcNavbarProps) => {
     };
   }, []);
 
-  console.log(scrollY);
 
   return (
-    <div role="tablist" className={cn("tabs tabs-bordered text-black/65 mx-auto z-20", scrollY>131 ? 'fixed top-0 p-6 z-20' : '')}>
+    <div role="tablist" className={cn("tabs tabs-bordered text-black/65 mx-auto z-20", scrollY>131 ? 'fixed top-0 p-6 z-20 bg-white' : '')}>
       <HomePage />
       <Ekibimiz data= {data}/>
       <Hizmetlerimiz />

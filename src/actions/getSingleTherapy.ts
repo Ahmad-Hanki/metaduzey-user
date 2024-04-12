@@ -1,10 +1,10 @@
 import { TherapyType } from "@/types/types"; // Assuming Therapist interface is defined in "@/types/types"
 import axios from "axios";
 
-const getTherapies = async (): Promise<TherapyType[]> => {
+const getSingleTherapy = async (id:string): Promise<TherapyType> => {
   'use server'
   try {
-    const res = await axios.get<TherapyType[]>(process.env.GET_DATA+'/ekib');
+    const res = await axios.get<TherapyType>(`${process.env.GET_DATA}/ekib/${id}`);
     return await res.data;
   } catch (err) {
     console.log(err);
@@ -12,4 +12,4 @@ const getTherapies = async (): Promise<TherapyType[]> => {
   }
 }
 
-export default getTherapies;
+export default getSingleTherapy;

@@ -1,21 +1,39 @@
-import EkibimizCard from "@/components/EkibimizCard";
 import TerapiCards from "@/components/TerapiCards";
 import Container from "@/components/ui/Container";
-import axios from "axios";
+import { Separator } from "@/components/ui/separator";
+import EkibibmizCardHolder from "./_components/EkibibmizCardHolder";
+import getBlogs from "@/actions/getBlogs";
+import BlogCardsHolder from "@/app/(home)/_components/BlogCardsHolder";
 
 export default async function Home() {
-
   return (
-    <main className="">
+    <main>
       <div className="bg-slate-100 py-28">
         <Container>
           <TerapiCards />
         </Container>
       </div>
 
-      <div className="py-28">
+      <Separator />
+
+      <div className="bg-white pb-28">
         <Container>
-          <EkibimizCard />
+          <EkibibmizCardHolder />
+        </Container>
+      </div>
+
+      <div className="bg-white pb-28">
+        <Container>
+          {/* Etkinlik ve Duyurular  sayfa */}
+          <div></div>
+        </Container>
+      </div>
+
+
+      
+      <div className="bg-white pb-28">
+        <Container>
+          <BlogCardsHolder />
         </Container>
       </div>
     </main>
