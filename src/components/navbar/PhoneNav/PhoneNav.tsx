@@ -1,3 +1,4 @@
+'use client'
 import Ekibimiz from "./Ekibimiz";
 import { Menu } from "lucide-react";
 import Hizmetlerimiz from "./Hizmetlerimiz";

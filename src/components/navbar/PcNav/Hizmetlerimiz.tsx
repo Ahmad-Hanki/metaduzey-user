@@ -73,7 +73,7 @@ const Hizmetlerimiz = () => {
         </a>
       </summary>
       <div className="bg-inherit pt-3">
-        <ul className="bg-white -z-50 w-52">
+        <ul className="bg-white z-50 w-52 space-y-3">
           {servers.map((link) => {
             return (
               <li key={link.href}>

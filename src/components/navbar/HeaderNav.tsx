@@ -14,15 +14,14 @@ const HeaderNav = () => {
             <Mail color="white" size={25} />
             <Link
               className="text-white"
-              href={"mailto:info@butunpsikoloji.com?subject=Hello! there,"}
+              href={"mailto:info@metaduzey.com?subject=Hello! there,"}
             >
-              info@butunpsikoloji.com
+              info@metaduzey.com
             </Link>
           </div>
           <div className="flex gap-5">
             <p className="text-white">
-              Esentepe Mah. Keskin Kalem Sk. No:15/1 Şişli/İstanbul
-            </p>
+            Selimiye, Selimiye İskele Cd. Hilal Apartmanı D:41-43, Daire No: 9, 34668 Üsküdar/İstanbul            </p>
             <div className="flex gap-1">
               <Link
                 href={"https://www.facebook.com/metaduzeypsy"}

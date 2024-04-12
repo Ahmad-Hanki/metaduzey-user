@@ -50,7 +50,7 @@ const EkHizmetlerimiz = () => {
         </a>
       </summary>
       <div className="bg-inherit p-3">
-        <ul className=" bg-white z-10 w-52">
+        <ul className=" bg-white z-10 w-52 space-y-3">
           {servers.map((link) => {
             return (
               <li key={link.href} className="max-w-60 mx-auto">

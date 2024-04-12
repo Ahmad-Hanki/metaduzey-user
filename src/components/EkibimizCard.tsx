@@ -2,18 +2,28 @@
 
 import { cn } from "@/lib/utils";
 import { TherapyType, therapyTypes } from "@/types/types";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import EkibGrid from "./EkibGrid";
+import TherapiesContext from "@/providers/TherapiesContext";
+import TypesContext from "@/providers/TypesContext";
 
-interface EkibimizCardProps {
-  data: TherapyType[];
-  types: therapyTypes[];
-}
 
-const EkibimizCard = ({ data, types }: EkibimizCardProps) => {
+
+const EkibimizCard = () => {
+  const [mutate, setMutate] = useState(false);
+  const {therapies: data} = useContext(TherapiesContext)
+  const {types} = useContext(TypesContext)
   const [ekibType, setEkibType] = useState<string>("");
   const [chosedTherapies, setChosedTherapies] = useState<TherapyType[]>(data);
-  // console.log(data[0].therapyTypes);
+
+  useEffect(() => {
+    setMutate(true);
+    setChosedTherapies(data);
+  },[data])
+
+  if(!mutate) return null
+  if(!data|| !types) return null
+
 
   const handleChosedData = (id: string) => {
     if (id === "") {
@@ -32,10 +42,6 @@ const EkibimizCard = ({ data, types }: EkibimizCardProps) => {
     });
     setChosedTherapies(filteredTherapies);
   };
-
-  useEffect(() => {
-    console.log(chosedTherapies);
-  }, [chosedTherapies]);
 
   return (
     <div>

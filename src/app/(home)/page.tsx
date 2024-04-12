@@ -2,7 +2,6 @@ import TerapiCards from "@/components/TerapiCards";
 import Container from "@/components/ui/Container";
 import { Separator } from "@/components/ui/separator";
 import EkibibmizCardHolder from "./_components/EkibibmizCardHolder";
-import getBlogs from "@/actions/getBlogs";
 import BlogCardsHolder from "@/app/(home)/_components/BlogCardsHolder";
 
 export default async function Home() {
