@@ -1,8 +1,6 @@
 import EkibimizCard from "@/components/EkibimizCard";
-import React from "react";
 
 const EkibibmizCardHolder = async () => {
-
 
   return (
     <div>

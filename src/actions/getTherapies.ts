@@ -1,4 +1,4 @@
-import { TherapyType } from "@/types/types"; // Assuming Therapist interface is defined in "@/types/types"
+import { TherapyType } from "@/types/types"; 
 import axios from "axios";
 
 const getTherapies = async (): Promise<TherapyType[]> => {

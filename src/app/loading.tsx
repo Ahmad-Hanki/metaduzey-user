@@ -1,8 +1,8 @@
 import React from "react";
 
-const loading = () => {
+const Loading = () => {
   return (
-    <div className="flex h-[80px] items-center">
+    <div className="flex h-[80px] items-center justify-center">
       <span className="loading loading-spinner loading-xs"></span>
       <span className="loading loading-spinner loading-sm"></span>
       <span className="loading loading-spinner loading-md"></span>
@@ -11,4 +11,4 @@ const loading = () => {
   );
 };
 
-export default loading;
+export default Loading;

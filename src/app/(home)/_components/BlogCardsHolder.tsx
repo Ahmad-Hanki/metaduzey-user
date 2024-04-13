@@ -2,7 +2,9 @@ import getBlogs from "@/actions/getBlogs";
 import BlogsCard from "@/components/BlogsCard";
 
 const BlogCardsHolder = async () => {
-  const blogs = await getBlogs();
+
+    const blogs = await getBlogs();
+    
   return (
     <div className="flex flex-col gap-12">
       <div className="flex flex-col items-center gap-5">

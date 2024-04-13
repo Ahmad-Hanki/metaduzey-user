@@ -12,7 +12,7 @@ interface LogoProps {
 }
 const Logo = ({data, types}:LogoProps) => {
   const {setTherapies} = useContext(TherapiesContext);
-  const {setTypes , types:t} = useContext(TypesContext);
+  const {setTypes } = useContext(TypesContext);
   const [mutate, setMutate] = useState(false);
 
   useEffect(() => {
@@ -25,7 +25,6 @@ const Logo = ({data, types}:LogoProps) => {
   },[data])
 
   if (!mutate) return null
-  console.log(t)
   return <div className="relative overflow-hidden aspect-[3/1] w-48">
     <Image fill alt='photo' src={logo} className='object-cover object-center'/>
   </div>;
