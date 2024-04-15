@@ -11,16 +11,14 @@ const EkHizmetlerimiz = () => {
 
   const servers = [
     {
-      name: "Bütünce Ebeveyn Danışmanlığı Çocuk Gelişim Takip Programı",
-      href: "/hizmetlerimiz/butun-ce-ebeveyn-cocuk-baglanma-ve-gelisim-takip-programi",
-      active:
-        pathname ===
-        "/hizmetlerimiz/butun-ce-ebeveyn-cocuk-baglanma-ve-gelisim-takip-programi",
+      name: "Iletisim bilgiler",
+      href: "/iletisim",
+      active: pathname === "/iletisim",
     },
     {
-      name: "Bütünce Ebeveyn Danışma Hattı",
-      href: "/hizmetlerimiz/butunce-ebeveyn-danisma-hatti",
-      active: pathname === "/hizmetlerimiz/butunce-ebeveyn-danisma-hatti",
+      name: "Insan kaynaklari",
+      href: "/insankaynaklari",
+      active: pathname === "/insankaynaklari",
     },
   ];
 
@@ -46,11 +44,11 @@ const EkHizmetlerimiz = () => {
             activeServerIndex !== -1 ? "text-black" : ""
           )}
         >
-          Bütünce Ebeveyn Danışmanlığı
+          Iletisim
         </a>
       </summary>
       <div className="bg-inherit p-3">
-        <ul className=" bg-white z-10 w-52 space-y-3">
+        <ul className=" bg-white z-10 w-40 space-y-3">
           {servers.map((link) => {
             return (
               <li key={link.href} className="max-w-60 mx-auto">

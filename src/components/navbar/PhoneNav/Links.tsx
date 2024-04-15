@@ -9,24 +9,50 @@ const Links = () => {
   const pathname = usePathname();
   const Links = [
     {
-      href: "/hizmetlerimiz/kurumsal-hizmetler",
-      name: "Kurumsal",
-      active: pathname === "/hizmetlerimiz/kurumsal-hizmetler",
+      href: "/avsgep",
+      name: "AVSGEP",
+      active: pathname === "/avsgep",
     },
     {
-      href: "/egitim-ve-supervizyon",
-      name: "Eğitim Ve Süpervizyon",
-      active: pathname === "/egitim-ve-supervizyon",
+      href: "/bisan",
+      name: "BISAN",
+      active: pathname === "/bisan",
+    },
+
+    {
+      href: "/pals",
+      name: "PALS",
+      active: pathname === "/pals",
+    },
+    {
+      href: "/nlp",
+      name: "NLP",
+      active: pathname === "/nlp",
+    },
+    {
+      href: "/ikban",
+      name: "IKBAN",
+      active: pathname === "/ikban",
+    },
+    {
+      href: "/football",
+      name: "FUTBOL MENTORING",
+      active: pathname === "/football",
+    },
+    {
+      href: "/coaching",
+      name: "COACHING",
+      active: pathname === "/coaching",
+    },
+    {
+      href: "/edu",
+      name: "EĞİTİMLER",
+      active: pathname === "/edu",
     },
     {
       href: "/blog/",
       name: "Blog",
       active: pathname === "/blog/",
-    },
-    {
-      href: "/iletisim",
-      name: "iletisim",
-      active: pathname === "/iletisim",
     },
   ];
   return (

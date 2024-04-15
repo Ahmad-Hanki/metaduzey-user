@@ -8,7 +8,7 @@ import MainFooter from "@/components/footer/MainFooter";
 import { TherapiesProvider } from "@/providers/TherapiesProvider";
 import { TypesProvider } from "@/providers/TypesProvider";
 import { BlogsProvider } from "@/providers/BlogProvider";
-
+import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,6 +26,7 @@ export default function RootLayout({
         <TherapiesProvider>
           <TypesProvider>
             <BlogsProvider>
+              <Toaster position="top-center" reverseOrder={false} />
               <HeaderNav />
               <Navbar />
               <main>{children}</main>

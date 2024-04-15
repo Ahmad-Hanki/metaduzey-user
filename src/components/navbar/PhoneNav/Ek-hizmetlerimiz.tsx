@@ -8,22 +8,20 @@ const EkHizmetlerimiz = () => {
   const pathname = usePathname();
   const servers = [
     {
-      name: "Bütünce Ebeveyn Danışmanlığı Çocuk Gelişim Takip Programı",
-      href: "/hizmetlerimiz/butun-ce-ebeveyn-cocuk-baglanma-ve-gelisim-takip-programi",
-      active:
-        pathname ===
-        "/hizmetlerimiz/butun-ce-ebeveyn-cocuk-baglanma-ve-gelisim-takip-programi",
+      name: "Iletisim bilgiler",
+      href: "/iletisim",
+      active: pathname === "/iletisim",
     },
     {
-      name: "Bütünce Ebeveyn Danışma Hattı",
-      href: "/hizmetlerimiz/butunce-ebeveyn-danisma-hatti",
-      active: pathname === "/hizmetlerimiz/butunce-ebeveyn-danisma-hatti",
+      name: "Insan Kaynaklari",
+      href: "/insankaynaklari",
+      active: pathname === "/insankaynaklari",
     },
   ];
   return (
     <details>
       <summary>
-        <p>Bütünce Ebeveyn Danışmanlığı</p>
+        <p>Iletisim</p>
       </summary>
       <ul>
         {servers.map((link) => {

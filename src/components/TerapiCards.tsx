@@ -19,24 +19,20 @@ import Image from "next/image";
 const TerapiCards = () => {
   const List = [
     {
-      href: "/hizmetlerimiz/psikolojik-danismanlik",
       name: "Bireysel Terapi",
       image: bireysal,
     },
 
     {
       name: "Çift & Evlilik Terapisi",
-      href: "/hizmetlerimiz/cift-terapisi-evlilik-terapisi",
       image: cift,
     },
     {
       name: "Çocuk & Ergen Terapisi",
-      href: "/hizmetlerimiz/cocuk-ergen-terapisi-danismanligi",
       image: cocuk,
     },
     {
       name: "Online Terapi",
-      href: "/hizmetlerimiz/online-terapi",
       image: online,
     },
   ];
@@ -50,12 +46,12 @@ const TerapiCards = () => {
       <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] justify-center gap-5 w-full">
         {List.map((card) => (
           <motion.div
-            key={card.href}
+            key={card.name}
             transition={{ duration: 0.3 }}
             whileHover={{ scale: 1.1 }}
             className="w-full h-full z-10"
           >
-            <Link href={card.href} >
+            <div >
               <Card className="h-full shadow-md">
                 <CardContent className="py-2">
                   <div className="relative aspect-square overflow-hidden rounded-md ">
@@ -69,7 +65,7 @@ const TerapiCards = () => {
                   <CardTitle className="text-center p-3">{card.name}</CardTitle>
                 </CardContent>
               </Card>
-            </Link>
+            </div>
           </motion.div>
         ))}
       </div>

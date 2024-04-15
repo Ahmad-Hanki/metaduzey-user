@@ -37,7 +37,7 @@ const Ekibimiz = ({ data }: ekibibmizProps) => {
         </Link>
       </summary>
       <div className="bg-inherit pt-3 cursor-default">
-        <ul className="  bg-white z-20 w-52 space-y-3">
+        <ul className="  bg-white z-20 w-40 space-y-3">
           {data.map((ekib) => {
             return (
               <li key={ekib.id}>

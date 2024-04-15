@@ -4,44 +4,70 @@ import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import HomePage from "./HomePage";
 import Ekibimiz from "./Ekibimiz";
-import Hizmetlerimiz from "./Hizmetlerimiz";
 import EkHizmetlerimiz from "./Ek-hizmetlerimiz";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-interface PcNavbarnameAndId  {
-  name:string
-  id:string
+interface PcNavbarnameAndId {
+  name: string;
+  id: string;
 }
 
 interface PcNavbarProps {
-  data : PcNavbarnameAndId[];
+  data: PcNavbarnameAndId[];
 }
 
-const PcNavbar = ({data}:PcNavbarProps) => {
+const PcNavbar = ({ data }: PcNavbarProps) => {
   const pathname = usePathname();
 
   const Links = [
     {
-      href: "/hizmetlerimiz/kurumsal-hizmetler",
-      name: "Kurumsal",
-      active: pathname === "/hizmetlerimiz/kurumsal-hizmetler",
+      href: "/avsgep",
+      name: "AVSGEP",
+      active: pathname === "/avsgep",
     },
     {
-      href: "/egitim-ve-supervizyon",
-      name: "Eğitim Ve Süpervizyon",
-      active: pathname === "/egitim-ve-supervizyon",
+      href: "/bisan",
+      name: "BISAN",
+      active: pathname === "/bisan",
+    },
+
+    {
+      href: "/pals",
+      name: "PALS",
+      active: pathname === "/pals",
     },
     {
-      href: "/blog",
+      href: "/nlp",
+      name: "NLP",
+      active: pathname === "/nlp",
+    },
+    {
+      href: "/ikban",
+      name: "IKBAN",
+      active: pathname === "/ikban",
+    },
+    {
+      href: "/football",
+      name: "FUTBOL MENTORING",
+      active: pathname === "/football",
+    },
+    {
+      href: "/coaching",
+      name: "COACHING",
+      active: pathname === "/coaching",
+    },
+    {
+      href: "/edu",
+      name: "EĞİTİMLER",
+      active: pathname === "/edu",
+    },
+    {
+      href: "/blog/",
       name: "Blog",
-      active: pathname === "/blog",
+      active: pathname === "/blog/",
     },
-    {
-      href: "/iletisim",
-      name: "iletisim",
-      active: pathname === "/iletisim",
-    },
+
   ];
   const [scrollY, setScrollY] = useState(0);
 
@@ -59,13 +85,16 @@ const PcNavbar = ({data}:PcNavbarProps) => {
     };
   }, []);
 
-
   return (
-    <div role="tablist" className={cn("tabs tabs-bordered text-black/65 mx-auto z-20", scrollY>131 ? 'fixed top-0 p-6 z-20 bg-white' : '')}>
+    <div
+      role="tablist"
+      className={cn(
+        "tabs tabs-bordered text-black/65 mx-auto z-20",
+        scrollY > 131 ? "fixed top-0 p-6 z-20 bg-white" : ""
+      )}
+    >
       <HomePage />
-      <Ekibimiz data= {data}/>
-      <Hizmetlerimiz />
-      <EkHizmetlerimiz />
+      <Ekibimiz data={data} />
 
       {Links.map((link) => {
         return (
@@ -89,6 +118,7 @@ const PcNavbar = ({data}:PcNavbarProps) => {
           </li>
         );
       })}
+      <EkHizmetlerimiz />
     </div>
   );
 };

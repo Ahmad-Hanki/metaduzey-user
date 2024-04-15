@@ -1,7 +1,6 @@
 'use client'
 import Ekibimiz from "./Ekibimiz";
 import { Menu } from "lucide-react";
-import Hizmetlerimiz from "./Hizmetlerimiz";
 import EkHizmetlerimiz from "./Ek-hizmetlerimiz";
 import MainPage from "./MainPage";
 import { Separator } from "../../ui/separator";
@@ -38,15 +37,11 @@ const PhoneNav = ({data}:PhoneNav) => {
           <Ekibimiz data={data}/>
         </li>
         <Separator />
-        <li>
-          <Hizmetlerimiz />
-        </li>
+        <Links />
         <Separator />
         <li>
           <EkHizmetlerimiz />
         </li>
-        <Separator />
-        <Links />
       </ul>
     </div>
   );
