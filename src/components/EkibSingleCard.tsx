@@ -5,8 +5,13 @@ import { notFound, useParams } from "next/navigation";
 import { useContext } from "react";
 import Image from "next/image";
 import RanduvuAlFormu from "./RanduvuAlFormu";
+import Booked from "./Booked";
 
-const EkibSingleCard = () => {
+interface EkibSingleCardProps {
+  appointment: any
+}
+
+const EkibSingleCard = ({ appointment }: EkibSingleCardProps) => {
   const { therapies } = useContext(TherapiesContext);
 
   const params = useParams();
@@ -80,7 +85,7 @@ const EkibSingleCard = () => {
             </div>
 
             <div>
-              <RanduvuAlFormu id={ekibId} />
+              {!appointment ? <RanduvuAlFormu id={ekibId} /> : <Booked />}
             </div>
           </div>
         </div>

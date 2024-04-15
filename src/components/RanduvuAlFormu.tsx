@@ -6,6 +6,8 @@ import { SelectedContact } from "./SelectedContactWay";
 import { PlaceSelected } from "./SelectedPlace";
 import { SelectedService } from "./SelectedService";
 import SubmissionButton from "./SubmissionButton";
+import axios from "axios";
+import AppointmentSubmission from "@/actions/AppointmentSubmission";
 
 interface RanduvuAlFormuProps {
   id?: string;
@@ -40,12 +42,11 @@ const RanduvuAlFormu = ({ id }: RanduvuAlFormuProps) => {
       toast.error("Therapy selection is required.");
       return;
     }
-    
+
     if (!destek) {
       toast.error("Tell us your problem so we can help.");
       return;
     }
-
 
     if (!service) {
       toast.error("Service selection is required.");
@@ -62,20 +63,14 @@ const RanduvuAlFormu = ({ id }: RanduvuAlFormuProps) => {
       return;
     }
 
-    const data = {
-        name,
-        email,
-        tel,
-        therapy,
-        destek,
-        service,
-        contact,
-        place,
-      };
-      
-      
 
-    toast.success("Appointment booked successfully!");
+
+    const appointment = await AppointmentSubmission(formData);
+    if (appointment.status == 200) {
+      toast.success("Appointment booked successfully!");
+    } else {
+      toast.error("Something went wrong");
+    }
   };
   return (
     <div>
