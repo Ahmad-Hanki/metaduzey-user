@@ -2,7 +2,7 @@ import Avsgep from '@/components/Avsgep'
 import { Metadata } from 'next';
 import React from 'react'
 export const metadata: Metadata = {
-  title: "AVSGEP",
+  title: "Avsgep",
 }; 
 const AsvgepPAge = () => {
   return (
