@@ -1,8 +1,10 @@
 import EkibSingleCard from "@/components/EkibSingleCard"
 import EkibimizSwipper from "@/components/EkibimizSwipper";
+import { Metadata } from "next";
 import { cookies } from "next/headers"
 
-const SingleEkibPage = () => {
+const SingleEkibPage = async () => {
+  
     const cookie = cookies(); 
     const appointment =  cookie.get('appointment');
   return (
