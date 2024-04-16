@@ -11,14 +11,14 @@ const SubmissionButton = ({ submit, submitting }: SubmissionButtonProps) => {
   let content;
   if (pending) {
     content = (
-      <button className="disabled btn">
+      <button className="disabled btn min-w-32">
         <span className="loading loading-ring loading-xs"></span>
         <p>{submitting}</p>
       </button>
     );
   } else {
     content = (
-      <button className="btn hover:text-white">
+      <button className="btn hover:text-white min-w-32">
         <p>{submit}</p>
       </button>
     );
