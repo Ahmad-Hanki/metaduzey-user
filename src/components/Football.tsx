@@ -6,7 +6,7 @@ const Football = () => {
     <div>
       <Hero title="FOOTBALL" path="AnaSayfa => football" />
       <Container>
-        <div className="flex gap-5 flex-col items-center text-center md:text-start md:items-start text-black/60">
+        <div className="flex gap-5 flex-col items-center text-center sm:text-start sm:items-start text-black/60">
           <h1 className="text-red-700">FUTBOL MENTORING</h1>
           <div>
             <p>

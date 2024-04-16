@@ -6,7 +6,7 @@ const Ikban = () => {
     <div>
       <Hero title="IKBAN" path="AnaSayfa => ikban" />
       <Container>
-        <div className="flex gap-5 flex-col items-center text-center md:text-start md:items-start text-black/60">
+        <div className="flex gap-5 flex-col items-center text-center sm:text-start sm:items-start text-black/60">
           <h1 className="text-red-700">
             İKBAN: İnsan Kaynakları Bireysel Sistem Analizi.
           </h1>

@@ -7,7 +7,7 @@ const Avsgep = () => {
     <div>
       <Hero title="AVSGEP" path="AnaSayfa => avsgep" />
       <Container>
-        <div className="flex gap-5 flex-col items-center text-center md:text-start md:items-start text-black/60">
+        <div className="flex gap-5 flex-col items-center text-center sm:text-start sm:items-start text-black/60">
           <div className="flex gap-3 flex-col ">
             <h1 className="text-red-700 p-1">
               AVSGEP - AKADEMİK ve SOSYAL GELİŞİM PROGRAMI
@@ -36,7 +36,7 @@ const Avsgep = () => {
               başkalarına karşı dürüst, sorumluluk sahibi, değişim ve
               yeniliklere açık, üretken, karar verme becerilerine sahip bireyler
               haline gelme çabalarımızı artık daha etkin hale getirdik. Bu
-              bağlamda çeşitli Üniversite ve Enstitülerden farklı Uzman ve
+              bağlasma çeşitli Üniversite ve Enstitülerden farklı Uzman ve
               Öğretim üyeleriyle yaptığımız işbirliği sonuç vermeye başladı.
               Karakter Gelişimi, Mental ve Sosyal Beceriler Eğitimi Türkiye
               gerçeklerinde uygulanabilir bir yöntem haline geldi. Uygulamalarla

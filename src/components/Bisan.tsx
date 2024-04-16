@@ -6,7 +6,7 @@ const Bisan = () => {
     <div className="bg-slate-200">
       <Hero title="BISAN" path="AnaSayfa => bisan" />
       <Container>
-        <div className="flex gap-5 flex-col items-center text-center md:text-start md:items-start text-black/60">
+        <div className="flex gap-5 flex-col items-center text-center sm:text-start sm:items-start text-black/60">
           <div className="flex gap-3 flex-col ">
             <h1 className="text-red-700 p-1">
               BİSAN-BİSAN BİREYSEL SİSTEM ANALİZİ-

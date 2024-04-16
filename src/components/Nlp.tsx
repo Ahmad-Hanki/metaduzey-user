@@ -6,7 +6,7 @@ const Nlp = () => {
     <div className="bg-slate-200">
       <Hero title="NLP" path="AnaSayfa => nlp" />
       <Container>
-        <div className="flex gap-5 flex-col items-center text-center md:text-start md:items-start text-black/60">
+        <div className="flex gap-5 flex-col items-center text-center sm:text-start sm:items-start text-black/60">
           <h1 className="text-red-700">Nlp</h1>
 
           <div className="flex flex-col gap-3">
