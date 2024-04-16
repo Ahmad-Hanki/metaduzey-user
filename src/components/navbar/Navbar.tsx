@@ -6,6 +6,7 @@ import PcNavbar from "./PcNav/PcNavbar";
 import { Separator } from "../ui/separator";
 import getTherapies from "@/actions/getTherapies";
 import getTypes from "@/actions/getTypes";
+import getBlogs from "@/actions/getBlogs";
 
 const Navbar = async () => {
   const therapy = await getTherapies();
@@ -15,13 +16,17 @@ const Navbar = async () => {
     id: therapist.id,
     name: therapist.name,
   }));
+
+  const blogs = await getBlogs();
+  
   const types = await getTypes();
+  
 
   return (
     <>
       <Container>
         <div className="flex justify-between items-center ">
-          <Logo data={therapy} types={types} />
+          <Logo data={therapy} types={types} blogs = {blogs}/>
 
           <div className="xl:hidden ">
             <PhoneNav data={therapistNamesAndIds} />

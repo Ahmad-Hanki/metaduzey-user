@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter, CardTitle } from "./ui/card";
 import Image from "next/image";
 import { TherapyType } from "@/types/types";
 import { cn } from "@/lib/utils";
+
 interface EkibTopCardProps {
   ekib: TherapyType;
   size?: boolean;
@@ -10,7 +11,7 @@ interface EkibTopCardProps {
 const EkibTopCard = ({ ekib, size }: EkibTopCardProps) => {
   return (
     <motion.div  whileHover={{ rotate: 1.2 }} key={ekib.id}>
-      <Card className={cn("flex flex-col justify-center items-center pt-5 h-full group ", size? 'min-h-80':'')}>
+      <Card className={cn("flex flex-col justify-center items-center pt-5 h-full group ", size? 'min-h-80 border-none':'')}>
         <CardContent>
           <div
             className={cn(

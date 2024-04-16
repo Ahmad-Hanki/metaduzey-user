@@ -9,14 +9,11 @@ import { useContext, useEffect } from "react";
 import BlogsContext from "@/providers/BlogContext";
 
 interface BlogsCard {
-  data: Blog[];
   num?: boolean;
 }
-const BlogsCard = ({ data, num }: BlogsCard) => {
-  const { setBlogs } = useContext(BlogsContext);
-  useEffect(() => {
-    setBlogs(data);
-  }, []);
+const BlogsCard = ({ num }: BlogsCard) => {
+  const { blogs:data } = useContext(BlogsContext);
+
   return (
     <div className="flex flex-col gap-5">
       <div className="flex-1 grid grid-cols-1 xl:grid-cols-2  gap-5 justify-center">
@@ -53,7 +50,7 @@ const BlogsCard = ({ data, num }: BlogsCard) => {
         })}
       </div>
       <div className="flex justify-center">
-        <Link className="btn hover:text-white mx-auto" href={"/blogs"}>
+        <Link className="btn hover:text-white mx-auto" href={"/blog"}>
           Show More
         </Link>
       </div>

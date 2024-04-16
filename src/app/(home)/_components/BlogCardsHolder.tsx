@@ -2,8 +2,6 @@ import getBlogs from "@/actions/getBlogs";
 import BlogsCard from "@/components/BlogsCard";
 
 const BlogCardsHolder = async () => {
-
-    const blogs = await getBlogs();
     
   return (
     <div className="flex flex-col gap-12">
@@ -14,7 +12,7 @@ const BlogCardsHolder = async () => {
           faydalı olabilecek psikolojiye dair yazılar
         </p>
       </div>
-      <BlogsCard data={blogs} num={true} />
+      <BlogsCard num={true} />
     </div>
   );
 };

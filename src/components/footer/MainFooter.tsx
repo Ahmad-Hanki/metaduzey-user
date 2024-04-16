@@ -3,17 +3,57 @@ import Link from "next/link";
 import logo from "@/assets/images/logo.png";
 import { Mail } from "lucide-react";
 const MainFooter = () => {
+  
   return (
+    
     <div className="pt-7">
+    
       <footer className="footer p-10 bg-base-200 text-base-content ">
         <nav>
           <h6 className="footer-title text-xl">Hızlı Bağlantılar</h6>
           <Link href={"/"} className="link link-hover">
             - Ana Sayfa
           </Link>
+          <Link href={"/ekibimiz"} className="link link-hover">
+            - Ekibiz
+          </Link>
+          <Link href={"/avsgep"} className="link link-hover">
+            - AVSGEP
+          </Link>
+          <Link href={"/bisan"} className="link link-hover">
+            - BISAN
+          </Link>
+          <Link href={"/pals"} className="link link-hover">
+            - PALS
+          </Link>
 
-          <Link href={"/blog"} className="link link-hover">
-            - Blog
+          <Link href={"/nlp"} className="link link-hover">
+            - NLP
+          </Link>
+       
+        </nav>
+        <nav>
+
+        <Link href={"/ikban"} className="link link-hover">
+            - IKBAN
+          </Link>
+        <Link href={"/football"} className="link link-hover">
+            - FUTBOL
+          </Link>
+        <Link href={"/coaching"} className="link link-hover">
+            - COACHING
+          </Link>
+        <Link href={"/edu"} className="link link-hover">
+            - EĞİTİMLER
+          </Link>
+        <Link href={"/blog"} className="link link-hover">
+            - BLOG
+          </Link>
+        <Link href={"/iletisim"} className="link link-hover">
+            - ILETISIM
+          </Link>
+        <Link href={"/insankaynaklari"} className="link link-hover">
+            - INSAN KAYNAKLAR
           </Link>
         </nav>
         <nav>

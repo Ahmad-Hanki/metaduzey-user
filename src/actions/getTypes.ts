@@ -5,7 +5,7 @@ const getTypes = async (): Promise<therapyTypes[]> => {
   'use server'
   try {
     const res = await axios.get<therapyTypes[]>(process.env.GET_DATA+'/therapyType');
-    return await res.data;
+    return res.data;
   } catch (err) {
     console.log(err);
     throw err;

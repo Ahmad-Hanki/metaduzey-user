@@ -28,7 +28,7 @@ const EkibGrid = ({ data }: EkibGridProps) => {
     >
       {data.map((ekib) => {
         return (
-          <EkibTopCard ekib={ekib} />
+          <EkibTopCard key={ekib.id} ekib={ekib} />
         );
       })}
     </MotionDiv>

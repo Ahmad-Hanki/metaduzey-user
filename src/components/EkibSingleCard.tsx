@@ -6,6 +6,7 @@ import { useContext } from "react";
 import Image from "next/image";
 import RanduvuAlFormu from "./RanduvuAlFormu";
 import Booked from "./Booked";
+import Hero from "./ui/Hero";
 
 interface EkibSingleCardProps {
   appointment: any
@@ -22,6 +23,8 @@ const EkibSingleCard = ({ appointment }: EkibSingleCardProps) => {
 
   return (
     <div>
+      <Hero title={therapy.name} path={`anaSayfa => Ekibimiz => ${therapy.name}`}/>
+
       <div className="flex flex-col justify-center items-center pt-5 border-none">
         <div key={therapy.id} className="flex flex-col xl:flex-row gap-7">
           <div className="text-center space-y-7">

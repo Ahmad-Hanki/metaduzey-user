@@ -22,14 +22,15 @@ const AppointmentSubmission = async (formData: FormData) => {
     contact,
     place,
   };
+
   const appointment = await axios.post(
     process.env.GET_DATA + "/appointment",
     data
   );
   if (appointment.status == 200) {
     const cookie = cookies();
-    const oneDay = 24 * 60 * 60 * 1000
-    cookie.set('appointment', 'true', { expires: Date.now() - oneDay })
+    const oneDay = 24 * 60 * 60 * 1000;
+    cookie.set("appointment", "true", { expires: Date.now() - oneDay });
     return { status: 200 };
   } else {
     return { status: appointment.status };

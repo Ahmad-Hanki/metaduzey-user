@@ -7,7 +7,7 @@ const getBlogs = async (): Promise<Blog[]> => {
 
   try {
     const res = await axios.get<Blog[]>(process.env.GET_DATA + "/blog");
-    return await res.data;
+    return res.data;
   } catch (err) {
     console.log(err);
     throw err;
