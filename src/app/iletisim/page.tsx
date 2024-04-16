@@ -2,6 +2,7 @@ import Hero from "@/components/ui/Hero"
 import Merkez from "./_components/Merkez"
 import Sube from "./_components/Sube"
 import ContactForm from "./_components/ContactForm"
+import GoogleMaps from "./_components/GoogleMaps"
 
 const page = () => {
   return (
@@ -10,6 +11,7 @@ const page = () => {
         <Merkez />
         <Sube/>
         <ContactForm/>
+        <GoogleMaps />
     </div>
   )
 }
