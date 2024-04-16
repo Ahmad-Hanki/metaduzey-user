@@ -1,4 +1,5 @@
 import EkibSingleCard from "@/components/EkibSingleCard"
+import EkibimizSwipper from "@/components/EkibimizSwipper";
 import { cookies } from "next/headers"
 
 const SingleEkibPage = () => {
@@ -8,6 +9,7 @@ const SingleEkibPage = () => {
 
     <div>
         <EkibSingleCard appointment={appointment}/>
+        <EkibimizSwipper />
     </div>
   )
 }
