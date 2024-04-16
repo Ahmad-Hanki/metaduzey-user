@@ -8,11 +8,13 @@ import { SelectedService } from "./SelectedService";
 import SubmissionButton from "./SubmissionButton";
 import axios from "axios";
 import AppointmentSubmission from "@/actions/AppointmentSubmission";
+import { cn } from "@/lib/utils";
 
 interface RanduvuAlFormuProps {
   id?: string;
+  size?: true;
 }
-const RanduvuAlFormu = ({ id }: RanduvuAlFormuProps) => {
+const RanduvuAlFormu = ({ id, size }: RanduvuAlFormuProps) => {
   const handleSubmitAction = async (formData: FormData) => {
     const name = formData.get("name");
     const email = formData.get("email");
@@ -63,8 +65,6 @@ const RanduvuAlFormu = ({ id }: RanduvuAlFormuProps) => {
       return;
     }
 
-
-
     const appointment = await AppointmentSubmission(formData);
     if (appointment.status == 200) {
       toast.success("Appointment booked successfully!");
@@ -78,13 +78,19 @@ const RanduvuAlFormu = ({ id }: RanduvuAlFormuProps) => {
         <div className="flex flex-col xl:flex-row gap-6 xl:gap-3">
           <input
             type="text"
-            className="input-xl flex-1 w-96 aspect-[1/0.16]  bg-slate-300 px-5"
+            className={cn(
+              "input-xl flex-1 w-96 aspect-[1/0.16] bg-slate-300 px-5",
+              size ? "w-full xl:w-[600px] " : ""
+            )}
             placeholder="Adiniz"
             name="name"
           />
           <input
             type="email"
-            className="input-xl flex-1 w-96 aspect-[1/0.16]   bg-slate-300 px-5"
+            className={cn(
+              "input-xl flex-1 w-96 aspect-[1/0.16] bg-slate-300 px-5",
+              size ? "w-full xl:w-[600px] " : ""
+            )}
             placeholder="Email"
             name="email"
           />
@@ -92,7 +98,10 @@ const RanduvuAlFormu = ({ id }: RanduvuAlFormuProps) => {
         <div className="flex flex-col xl:flex-row gap-6 xl:gap-3">
           <input
             type="tel"
-            className="input-xl flex-1 w-96 aspect-[1/0.16]  bg-slate-300 px-5"
+            className={cn(
+              "input-xl flex-1 w-96 aspect-[1/0.16] bg-slate-300 px-5",
+              size ? "w-full xl:w-[600px] " : ""
+            )}
             placeholder="Telefon"
             name="tel"
           />
