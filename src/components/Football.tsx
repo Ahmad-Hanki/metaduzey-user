@@ -17,8 +17,8 @@ const Football = () => {
               uyguluyor.
             </p>
             <p>
-              İlk olarak futbol filminin aktörleri "futbolcularla" bu filmin
-              yönetmeni "teknik direktörleri" konu alan bir proje geliştirildi.
+              İlk olarak futbol filminin aktörleri &quot;futbolcularla&quot; bu filmin
+              yönetmeni &quot;teknik direktörleri&quot; konu alan bir proje geliştirildi.
               METADUZEY INTERNATIONAL COACHING INSTITUTE, ülkemizde ilk kez
               gerçekleştirilecek bu uygulama da takımın başarıya ulaşması için
               takımı oluşturan her bireyi tek tek ele alıyor.

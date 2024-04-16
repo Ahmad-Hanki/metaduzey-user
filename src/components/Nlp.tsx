@@ -20,7 +20,7 @@ const Nlp = () => {
                 - Kendinizi açık bir şekilde ifade edip, çocuğunuza da sizi daha
                 iyi anlayıp tepki göstermesini sağlayacak olan olumlu bir
                 iletişim kurmayı keşfedin. Örnek; çocuğunuza YAPMAMASI gereken
-                bir şeyi söyleyin. Mesela, "üstünü kirletmeden yemeğini ye !".
+                bir şeyi söyleyin. Mesela, &quot;üstünü kirletmeden yemeğini ye !&quot;.
                 Muhtemelen bu söylediğiniz, istenmeyen davranışın meydana gelme
                 olasılığını artıracaktır, çünkü çocuk bu isteği yerine
                 getirebilmek için önce olumsuz yani istenmeyen davranış üzerinde
@@ -111,7 +111,7 @@ const Nlp = () => {
                 öğretme stili.
               </p>
               <p>
-                - NLP'nin temel amaçlarından biri de, tam öğrenmenin nasıl
+                - NLP&apos;nin temel amaçlarından biri de, tam öğrenmenin nasıl
                 gerçekleştiğini ve yeni bilginin daha önce var olan bilgiler ile
                 etkileşimini anlamak. Bu alandaki araştırmalar sayesinde,
                 günümüzde birçok etkili öğrenme ve öğretme stratejisi
@@ -137,14 +137,14 @@ const Nlp = () => {
             <h1 className="text-red-700">Kişisel Gelişimde NLP</h1>
             <div>
               <p>
-                - Birçok insan NLP' i kendi kişisel gelişimi için kullanıyor.
+                - Birçok insan NLP&apos; i kendi kişisel gelişimi için kullanıyor.
                 Sizi kısıtlayan korkuların, alışkanlıkların ve benzeri
                 etkenlerin üstesinden gelip, sizi hedefleriniz doğrultusunda
                 destekleyen yeni davranış seçeneklerinin oluşturulmasında NLP
                 size destek sağlar.
               </p>
               <p>
-                - NLP' nin temel varsayımları ve özel uygulamaları, geçmişten
+                - NLP&apos; nin temel varsayımları ve özel uygulamaları, geçmişten
                 gelen korkularınızı, kısıtlayıcı inançlarınızı, zarar veren
                 alışkanlıklarınızı değiştirmede size yardımcı olacak etkili
                 çözümler sunarak yaşam enerjinizi yeniden keşfetmenizi sağlar.
@@ -192,7 +192,7 @@ const Nlp = () => {
               </p>
               <p>
                 - Bu yöntemlerden belki de en tanınmış olanlarını, kişisel korku
-                ve fobilerden kurtulmada kullanılan 'NLP Fobi Tekniği' dir.
+                ve fobilerden kurtulmada kullanılan &apos;NLP Fobi Tekniği&apos; dir.
                 Senelerdir süregelen ve belki de yaşamınızı sürekli kısıtlayan
                 (ör. yükseklik yada uçak korkusu) ve benzeri fobilerden çok kısa
                 süre içerisinde kurtulabilirsiniz.
@@ -213,7 +213,7 @@ const Nlp = () => {
             <div>
               <p>
                 - İş dünyası, endüstri, yönetim ve psikososyal alanlarda
-                Coaching'e duyulan gereksinim her geçen gün artmakta. Birçok
+                Coaching&apos;e duyulan gereksinim her geçen gün artmakta. Birçok
                 profesyonel Coach, kişi, grup ya da daha büyük organizasyonları,
                 planlama, kritik dönemleri atlatma, kişisel performansı açığa
                 çıkarma ya da hedeflere ulaşma süreçlerinde destekleme amacıyla
@@ -231,7 +231,7 @@ const Nlp = () => {
             <h1 className="text-red-700">Sağlık Hizmetlerinde NLP</h1>
             <div>
               <p>
-                - NLP' nin sunmuş olduğu temel varsayımlar, iletişim kalıpları,
+                - NLP&apos; nin sunmuş olduğu temel varsayımlar, iletişim kalıpları,
                 yöntem ve uygulamaları doktor, hekim, sağlık personeli ve kendi
                 sağlığı ile yakından ilgilenen kişilere faydalı içerikler sunar.
               </p>

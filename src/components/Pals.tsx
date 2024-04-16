@@ -7,7 +7,7 @@ const Pals = () => {
       <Hero title="PALS" path="AnaSayfa => pals" />
       <Container>
         <div className="flex gap-5 flex-col items-center text-center sm:text-start sm:items-start text-black/60">
-          <h1 className="text-red-700">PALS "Pratik Algı Sistemleri"</h1>
+          <h1 className="text-red-700">PALS &quot;Pratik Algı Sistemleri&quot;</h1>
           <div className="flex flex-col gap-3">
             <div>
               <p>
