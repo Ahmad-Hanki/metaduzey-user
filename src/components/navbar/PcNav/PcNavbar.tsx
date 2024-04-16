@@ -65,7 +65,7 @@ const PcNavbar = ({ data }: PcNavbarProps) => {
     {
       href: "/blog/",
       name: "Blog",
-      active: pathname === "/blog/",
+      active: pathname === "/blog",
     },
 
   ];
