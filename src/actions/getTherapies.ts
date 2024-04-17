@@ -5,7 +5,7 @@ const getTherapies = async (): Promise<TherapyType[]> => {
   'use server'
 
   try {
-    const res = await axios.get<TherapyType[]>(process.env.GET_DATA+'/ekib');
+    const res = await axios.get<TherapyType[]>('https://metaduzey-dashborad.vercel.app/api/ekib');
     return res.data;
   } catch (err) {
     console.log(err);

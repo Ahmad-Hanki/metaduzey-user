@@ -24,7 +24,7 @@ const AppointmentSubmission = async (formData: FormData) => {
   };
 
   const appointment = await axios.post(
-    process.env.GET_DATA + "/appointment",
+    'https://metaduzey-dashborad.vercel.app/api/appointment',
     data
   );
   if (appointment.status == 200) {

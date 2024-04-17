@@ -1,6 +1,6 @@
 "use client";
 
-import ContactSubmission from "@/actions/ContactContactSubmission";
+import ContactSubmission from "@/actions/ContactSubmission";
 import SubmissionButton from "@/components/SubmissionButton";
 import Container from "@/components/ui/Container";
 import { Phone, User, Mail, LucideAlignStartVertical } from "lucide-react";

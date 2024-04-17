@@ -6,7 +6,7 @@ const getBlogs = async (): Promise<Blog[]> => {
   await new Promise((resolve) => setTimeout(resolve, 2000)); 
 
   try {
-    const res = await axios.get<Blog[]>(process.env.GET_DATA + "/blog");
+    const res = await axios.get<Blog[]>('https://metaduzey-dashborad.vercel.app/api/blog');
     return res.data;
   } catch (err) {
     console.log(err);
