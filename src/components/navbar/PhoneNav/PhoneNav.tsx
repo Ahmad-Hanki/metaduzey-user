@@ -1,21 +1,22 @@
-'use client'
+"use client";
 import Ekibimiz from "./Ekibimiz";
 import { Menu } from "lucide-react";
 import EkHizmetlerimiz from "./Ek-hizmetlerimiz";
 import MainPage from "./MainPage";
 import { Separator } from "../../ui/separator";
 import Links from "./Links";
+import Link from "next/link";
 
-interface PhoneNavProps{
-  name:string,
-  id:string
+interface PhoneNavProps {
+  name: string;
+  id: string;
 }
 
 interface PhoneNav {
-   data : PhoneNavProps[];
+  data: PhoneNavProps[];
 }
 
-const PhoneNav = ({data}:PhoneNav) => {
+const PhoneNav = ({ data }: PhoneNav) => {
   return (
     <div className="dropdown dropdown-end bg-transparent text-black z-20">
       <div
@@ -34,7 +35,7 @@ const PhoneNav = ({data}:PhoneNav) => {
         </li>
         <Separator />
         <li>
-          <Ekibimiz data={data}/>
+          <Ekibimiz data={data} />
         </li>
         <Separator />
         <Links />
@@ -42,6 +43,8 @@ const PhoneNav = ({data}:PhoneNav) => {
         <li>
           <EkHizmetlerimiz />
         </li>
+        <Separator />
+        <li><Link className="btn w-full" href={'randevu-al'}>Randevu al</Link></li>
       </ul>
     </div>
   );
