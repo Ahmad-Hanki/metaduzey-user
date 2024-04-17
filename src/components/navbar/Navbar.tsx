@@ -7,9 +7,11 @@ import { Separator } from "../ui/separator";
 import getTherapies from "@/actions/getTherapies";
 import getTypes from "@/actions/getTypes";
 import getBlogs from "@/actions/getBlogs";
+import prisma from "@/db/client";
 
 const Navbar = async () => {
   const therapy = await getTherapies();
+  await prisma.$disconnect();
   const phoneNumber = " +90 532 225 61 20";
 
   const therapistNamesAndIds = therapy.map((therapist) => ({
@@ -18,15 +20,16 @@ const Navbar = async () => {
   }));
 
   const blogs = await getBlogs();
-  
+  await prisma.$disconnect();
+
   const types = await getTypes();
-  
+  await prisma.$disconnect();
 
   return (
     <>
       <Container>
         <div className="flex justify-between items-center ">
-          <Logo data={therapy} types={types} blogs = {blogs}/>
+          <Logo data={therapy} types={types} blogs={blogs} />
 
           <div className="xl:hidden ">
             <PhoneNav data={therapistNamesAndIds} />

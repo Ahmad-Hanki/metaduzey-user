@@ -6,6 +6,8 @@ const getTherapies = async (): Promise<TherapyType[]> => {
   "use server";
 
   try {
+    await prisma.$disconnect();
+
     const therapy = await prisma.therapy.findMany({
       include: {
         therapyPlaces: {

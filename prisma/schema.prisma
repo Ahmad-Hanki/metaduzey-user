@@ -1,26 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model Therapy {
-  id            String                @id @default(uuid())
-  name          String
-  egitim        String?
-  imageUrl      String                @default("https://res.cloudinary.com/ddxser4ml/image/upload/txwk370nwk6kg6hxluxn.jpg") @db.VarChar(5000)
-  lisans        String?
-  summery       String                @db.VarChar(2000)
-  terapiEgtim   String?
-  uzmanAlan     String?
-  yuksekLisans  String?
-  Appointments  Appointment[]
+  id   String @id @default(uuid())
+  name String
+
+  egitim       String?
+  lisans       String?
+  yuksekLisans String?
+  terapiEgtim  String?
+  uzmanAlan    String?
+
+  summery  String @db.VarChar(2000)
+  imageUrl String @default("https://res.cloudinary.com/ddxser4ml/image/upload/txwk370nwk6kg6hxluxn.jpg") @db.VarChar(5000)
+
+  therapyTypes  TherapyTypeTherapy[] // cocuk  // category
   therapyPlaces TherapyPlaceTherapy[]
-  therapyTypes  TherapyTypeTherapy[]
   therapyUnvans TherapyUnvanTherapy[]
+  Appointments   Appointment[]
 }
 
 model TherapyType {
@@ -31,13 +40,10 @@ model TherapyType {
 
 model TherapyTypeTherapy {
   id            String      @id @default(uuid())
-  therapyId     String
-  therapyTypeId String
   therapy       Therapy     @relation(fields: [therapyId], references: [id], onDelete: Cascade)
+  therapyId     String
   therapyType   TherapyType @relation(fields: [therapyTypeId], references: [id])
-
-  @@index([therapyId], map: "TherapyTypeTherapy_therapyId_fkey")
-  @@index([therapyTypeId], map: "TherapyTypeTherapy_therapyTypeId_fkey")
+  therapyTypeId String
 }
 
 model TherapyPlace {
@@ -48,13 +54,10 @@ model TherapyPlace {
 
 model TherapyPlaceTherapy {
   id             String       @id @default(uuid())
-  therapyId      String
-  therapyPlaceId String
   therapy        Therapy      @relation(fields: [therapyId], references: [id], onDelete: Cascade)
+  therapyId      String
   therapyPlace   TherapyPlace @relation(fields: [therapyPlaceId], references: [id])
-
-  @@index([therapyId], map: "TherapyPlaceTherapy_therapyId_fkey")
-  @@index([therapyPlaceId], map: "TherapyPlaceTherapy_therapyPlaceId_fkey")
+  therapyPlaceId String
 }
 
 model TherapyUnvan {
@@ -65,21 +68,19 @@ model TherapyUnvan {
 
 model TherapyUnvanTherapy {
   id             String       @id @default(uuid())
-  therapyId      String
-  therapyUnvanId String
   therapy        Therapy      @relation(fields: [therapyId], references: [id], onDelete: Cascade)
+  therapyId      String
   therapyUnvan   TherapyUnvan @relation(fields: [therapyUnvanId], references: [id])
-
-  @@index([therapyId], map: "TherapyUnvanTherapy_therapyId_fkey")
-  @@index([therapyUnvanId], map: "TherapyUnvanTherapy_therapyUnvanId_fkey")
+  therapyUnvanId String
 }
 
 model Blog {
-  id             String         @id @default(uuid())
-  title          String
-  summery        String         @db.VarChar(10000)
-  yazan          String
-  imageUrl       String         @db.VarChar(5000)
+  id       String @id @default(uuid())
+  title    String
+  summery  String @db.VarChar(10000)
+  yazan    String
+  imageUrl String @db.VarChar(5000)
+
   createdAt      DateTime       @default(now())
   updatedAt      DateTime       @updatedAt
   blogCategories BlogCategory[]
@@ -93,39 +94,38 @@ model Category {
 
 model BlogCategory {
   id         String   @id @default(uuid())
-  blogId     String
-  categoryId String
   blog       Blog     @relation(fields: [blogId], references: [id])
+  blogId     String
   category   Category @relation(fields: [categoryId], references: [id])
-
-  @@index([blogId], map: "BlogCategory_blogId_fkey")
-  @@index([categoryId], map: "BlogCategory_categoryId_fkey")
+  categoryId String
 }
 
 model Appointment {
   id            String   @id @default(uuid())
-  therapyId     String
-  createdAt     DateTime @default(now())
-  checked       Boolean  @default(false)
-  contact       String
-  destek        String
-  email         String
   name          String
-  place         String
-  service       String
+  email         String
   tel           String
+  destek        String
+  service       String
+  contact       String
+  place         String
+
+  checked Boolean @default(false)
+
+  therapyId     String
   chosenTherapy Therapy  @relation(fields: [therapyId], references: [id])
 
-  @@index([therapyId], map: "Appointment_therapyId_fkey")
+  createdAt     DateTime @default(now())
 }
 
+
 model Contact {
-  id        String   @id @default(uuid())
-  name      String
-  phone     String
-  email     String
-  title     String
-  message   String
-  helped    Boolean  @default(false)
+  id String @id @default(uuid())
+  name String
+  phone String
+  email String
+  title String
+  message String
+  helped Boolean @default(false)
   CreatedAt DateTime @default(now())
 }

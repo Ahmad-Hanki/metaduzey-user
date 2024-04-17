@@ -5,6 +5,8 @@ import axios from "axios";
 const getTypes = async (): Promise<therapyTypes[]> => {
   "use server";
   try {
+    await prisma.$disconnect();
+
     const types = await prisma.therapyType.findMany();
     prisma.$disconnect();
     return types;

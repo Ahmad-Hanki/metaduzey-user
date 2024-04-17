@@ -27,6 +27,8 @@ export const ContactSubmission = async (formData: FormData) => {
   }
 
   try {
+    await prisma.$disconnect();
+
     await prisma.contact.create({
       data: {
         name,

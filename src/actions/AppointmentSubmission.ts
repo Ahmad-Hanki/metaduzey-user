@@ -40,6 +40,8 @@ const AppointmentSubmission = async (formData: FormData) => {
   }
 
   try {
+    await prisma.$disconnect();
+
     await prisma.appointment.create({
       data: {
         name,

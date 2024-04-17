@@ -7,6 +7,8 @@ const getBlogs = async (): Promise<Blog[]> => {
   await new Promise((resolve) => setTimeout(resolve, 2000)); 
 
   try {
+    await prisma.$disconnect();
+
     const blog = await prisma.blog.findMany({
       include: {
         blogCategories:{
