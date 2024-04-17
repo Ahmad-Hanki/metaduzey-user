@@ -15,11 +15,6 @@ const EkHizmetlerimiz = () => {
       href: "/iletisim",
       active: pathname === "/iletisim",
     },
-    {
-      name: "Insan kaynaklari",
-      href: "/insankaynaklari",
-      active: pathname === "/insankaynaklari",
-    },
   ];
 
   const activeServerIndex = servers.findIndex(

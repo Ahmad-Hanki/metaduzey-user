@@ -12,11 +12,6 @@ const EkHizmetlerimiz = () => {
       href: "/iletisim",
       active: pathname === "/iletisim",
     },
-    {
-      name: "Insan Kaynaklari",
-      href: "/insankaynaklari",
-      active: pathname === "/insankaynaklari",
-    },
   ];
   return (
     <details>

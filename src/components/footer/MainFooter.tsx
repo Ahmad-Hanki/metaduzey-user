@@ -52,9 +52,6 @@ const MainFooter = () => {
         <Link href={"/iletisim"} className="link link-hover">
             - ILETISIM
           </Link>
-        <Link href={"/insankaynaklari"} className="link link-hover">
-            - INSAN KAYNAKLAR
-          </Link>
         </nav>
         <nav>
           <h6 className="footer-title">Legal</h6>
