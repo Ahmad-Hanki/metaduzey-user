@@ -1,15 +1,19 @@
+import prisma from "@/db/client";
 import { therapyTypes } from "@/types/types"; // Assuming Therapist interface is defined in "@/types/types"
 import axios from "axios";
 
 const getTypes = async (): Promise<therapyTypes[]> => {
-  'use server'
+  "use server";
   try {
-    const res = await axios.get<therapyTypes[]>('https://metaduzey-dashborad.vercel.app/api/therapyType');
-    return res.data;
+    const types = await prisma.therapyType.findMany();
+    prisma.$disconnect();
+    return types;
   } catch (err) {
     console.log(err);
+    prisma.$disconnect();
+
     throw err;
   }
-}
+};
 
 export default getTypes;

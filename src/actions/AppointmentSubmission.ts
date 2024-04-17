@@ -1,39 +1,66 @@
 "use server";
 
+import prisma from "@/db/client";
 import axios from "axios";
 import { cookies } from "next/headers";
 
 const AppointmentSubmission = async (formData: FormData) => {
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const tel = formData.get("tel");
-  const therapy = formData.get("therapy");
-  const destek = formData.get("destek");
-  const service = formData.get("service");
-  const contact = formData.get("contact");
-  const place = formData.get("place");
-  const data = {
-    name,
-    email,
-    tel,
-    therapy,
-    destek,
-    service,
-    contact,
-    place,
-  };
+  const name = formData.get("name")?.toString();
+  const email = formData.get("email")?.toString();
+  const tel = formData.get("tel")?.toString();
+  const therapy = formData.get("therapy")?.toString();
+  const destek = formData.get("destek")?.toString();
+  const service = formData.get("service")?.toString();
+  const contact = formData.get("contact")?.toString();
+  const place = formData.get("place")?.toString();
 
-  const appointment = await axios.post(
-    'https://metaduzey-dashborad.vercel.app/api/appointment',
-    data
-  );
-  if (appointment.status == 200) {
+  if (!name) {
+    return null;
+  }
+  if (!email) {
+    return null;
+  }
+  if (!tel) {
+    return null;
+  }
+  if (!therapy) {
+    return null;
+  }
+  if (!destek) {
+    return null;
+  }
+  if (!service) {
+    return null;
+  }
+  if (!contact) {
+    return null;
+  }
+  if (!place) {
+    return null;
+  }
+
+  try {
+    await prisma.appointment.create({
+      data: {
+        name,
+        email,
+        tel,
+        destek,
+        service,
+        contact,
+        place,
+        therapyId: therapy,
+      },
+    });
+
+    await prisma.$disconnect();
     const cookie = cookies();
     const oneDay = 24 * 60 * 60 * 1000;
     cookie.set("appointment", "true", { expires: Date.now() - oneDay });
     return { status: 200 };
-  } else {
-    return { status: appointment.status };
+  } catch (err) {
+  } finally {
+    await prisma.$disconnect();
   }
 };
 

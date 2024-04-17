@@ -1,3 +1,4 @@
+import prisma from "@/db/client";
 import { Blog } from "@/types/types"; 
 import axios from "axios";
 
@@ -6,9 +7,21 @@ const getBlogs = async (): Promise<Blog[]> => {
   await new Promise((resolve) => setTimeout(resolve, 2000)); 
 
   try {
-    const res = await axios.get<Blog[]>('https://metaduzey-dashborad.vercel.app/api/blog');
-    return res.data;
+    const blog = await prisma.blog.findMany({
+      include: {
+        blogCategories:{
+          select:{
+            category:true
+          }
+        }
+      }
+    }) 
+    await prisma.$disconnect()
+
+    return blog;
   } catch (err) {
+    await prisma.$disconnect()
+
     console.log(err);
     throw err;
   }

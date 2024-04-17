@@ -8,11 +8,11 @@ import toast from "react-hot-toast";
 
 const ContactForm = () => {
   const handleSubmit = async (formData: FormData) => {
-    const name = formData.get("name");
-    const email = formData.get("email");
+    const name = formData.get("name")?.toString();
+    const email = formData.get("email")?.toString();
     const phone = formData.get("phone");
-    const title = formData.get("title");
-    const message = formData.get("message");
+    const title = formData.get("title")?.toString();
+    const message = formData.get("message")?.toString();
 
     if (!name) {
       toast.error("Name is required.");
@@ -50,20 +50,14 @@ const ContactForm = () => {
       return;
     }
 
-    const data = {
-      name,
-      email,
-      phone,
-      title,
-      message,
-    };
-
     try {
-      const res = await ContactSubmission(data);
-      if (res.status == 200) {
+      const res = await ContactSubmission(formData);
+      if (res?.status == 200) {
         toast.success("Sended Successfully");
       }
     } catch (err) {
+      toast.success(" Something went wrong");
+
       console.log(err);
     }
   };

@@ -66,7 +66,7 @@ const RanduvuAlFormu = ({ id, size }: RanduvuAlFormuProps) => {
     }
 
     const appointment = await AppointmentSubmission(formData);
-    if (appointment.status == 200) {
+    if (appointment?.status == 200) {
       toast.success("Appointment booked successfully!");
     } else {
       toast.error("Something went wrong");
