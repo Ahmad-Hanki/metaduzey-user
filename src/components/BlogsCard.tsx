@@ -1,5 +1,4 @@
 'use client'
-import { Blog } from "@/types/types";
 import Link from "next/link";
 import { Card, CardContent, CardTitle } from "./ui/card";
 import Image from "next/image";
@@ -23,7 +22,7 @@ const BlogsCard = ({ num }: BlogsCard) => {
           }
 
           return (
-            <Link key={blog.id} href={`/blogs/${blog.id}`}>
+            <div key={blog.id}>
               <Card className="flex gap-3 pb-5">
                 <CardContent>
                   <div className="relative overflow-hidden aspect-[1/1.5] w-40 sm:w-44 md:w-48 xl:w-52 ">
@@ -45,7 +44,7 @@ const BlogsCard = ({ num }: BlogsCard) => {
                   <p>{shortenSummary(blog.summery)}</p>
                 </div>
               </Card>
-            </Link>
+            </div>
           );
         })}
       </div>
