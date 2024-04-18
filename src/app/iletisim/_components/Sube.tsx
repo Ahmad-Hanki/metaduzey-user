@@ -11,7 +11,8 @@ const Sube = () => {
   const SubeList = [
     {
       name: "Adres",
-      content: "Selimiye, Selimiye İskele Cd. Hilal Apartmanı D:41-43, Daire No: 9, 34668      ",
+      content:
+        "Selimiye, Selimiye İskele Cd. Hilal Apartmanı D:41-43, Daire No: 9, 34668      ",
       extraContent: "Selimiye / Üsküdar      ",
       icon: <Map />,
     },
@@ -53,8 +54,7 @@ const Sube = () => {
             );
           })}
         </div>
-        <Separator className="p-1"/>
-
+        <Separator className="p-1" />
       </Container>
     </div>
   );

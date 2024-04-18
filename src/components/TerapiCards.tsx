@@ -43,16 +43,16 @@ const TerapiCards = () => {
         Terapi ve Danışmanlık Hizmetleri
       </h1>
 
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] justify-center gap-5 w-full">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] justify-center gap-5 w-full">
         {List.map((card) => (
           <motion.div
             key={card.name}
             transition={{ duration: 0.3 }}
             whileHover={{ scale: 1.1 }}
-            className="w-full h-full z-10"
+            className="w-full h-full z-10 p-5"
           >
-            <div >
-              <Card className="h-full shadow-md">
+            <div className="h-full">
+              <Card className="h-full shadow-md ">
                 <CardContent className="py-2">
                   <div className="relative aspect-square overflow-hidden rounded-md ">
                     <Image

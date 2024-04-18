@@ -28,7 +28,7 @@ const Navbar = async () => {
   return (
     <>
       <Container>
-        <div className="flex justify-between items-center ">
+        <div className="flex justify-between pb-3 items-center ">
           <Logo data={therapy} types={types} blogs={blogs} />
 
           <div className="xl:hidden ">

@@ -52,7 +52,7 @@ const ContactForm = () => {
 
     try {
       const res = await ContactSubmission(formData);
-      
+
       if (res?.status == 200) {
         toast.success("Sended Successfully");
       }

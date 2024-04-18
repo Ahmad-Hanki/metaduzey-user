@@ -3,11 +3,8 @@ import Link from "next/link";
 import logo from "@/assets/images/logo.png";
 import { Mail } from "lucide-react";
 const MainFooter = () => {
-  
   return (
-    
     <div className="pt-7">
-    
       <footer className="footer p-10 bg-base-200 text-base-content ">
         <nav>
           <h6 className="footer-title text-xl">Hızlı Bağlantılar</h6>
@@ -30,26 +27,24 @@ const MainFooter = () => {
           <Link href={"/nlp"} className="link link-hover">
             - NLP
           </Link>
-       
         </nav>
         <nav>
-
-        <Link href={"/ikban"} className="link link-hover">
+          <Link href={"/ikban"} className="link link-hover">
             - IKBAN
           </Link>
-        <Link href={"/football"} className="link link-hover">
+          <Link href={"/football"} className="link link-hover">
             - FUTBOL
           </Link>
-        <Link href={"/coaching"} className="link link-hover">
+          <Link href={"/coaching"} className="link link-hover">
             - COACHING
           </Link>
-        <Link href={"/edu"} className="link link-hover">
+          <Link href={"/edu"} className="link link-hover">
             - EĞİTİMLER
           </Link>
-        <Link href={"/blog"} className="link link-hover">
+          <Link href={"/blog"} className="link link-hover">
             - BLOG
           </Link>
-        <Link href={"/iletisim"} className="link link-hover">
+          <Link href={"/iletisim"} className="link link-hover">
             - ILETISIM
           </Link>
         </nav>
